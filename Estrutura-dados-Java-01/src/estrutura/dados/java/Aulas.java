@@ -14,14 +14,16 @@ public class Aulas {
         
     }
    
+    
+    
+    //AULA 01 SOBRE COMO ADICIONAR ELEMENTOS AO VETOR
+    
+    
   /* public boolean adicionar (String elemento) {
     
-      //metodo aula 05, intersecção aula01
+      //metodo aula 05, INTERSECÇÃO aula01
         
-         this.aumenteCapacidade();
-         
-        
-        //AULA 01 SOBRE COMO ADICIONAR ELEMENTOS AO VETOR
+         this.aumenteCapacidade();//
         
         
         for ( int i=0; i < elementos.length; i++) {
@@ -31,9 +33,13 @@ public class Aulas {
         }
     }*/
         
+    
+    //AULA 02 TAMANHO DO VETOR 
         public boolean adicionar(String elemento) { 
-            //metodo aula 05, intersecção aula 01
-            this.aumenteCapacidade();
+            
+         //metodo aula 05, INTERSECÇÃO aula 02
+         
+            this.aumenteCapacidade();//
             
             if(this.tamanho < this.elementos.length) {
                 this.elementos[this.tamanho] = elemento;
@@ -42,20 +48,10 @@ public class Aulas {
             }
             return false;
         }
-        
-        
-        //aula 02 tamanho do vetor 
-        /*
-        if ( tamanho < elementos.length){
-             this.elementos[this.tamanho] = elemento;
-        this.tamanho++;
-        return true;
-           }
-               return false;*/
          
   
 
-    //Aula 03 obter elemento de um posicao 
+    //AULA 03 OBTER ELEMENTO DE UMA POSIÇÃO
     
     /*public String busca ( int posicao) {
         if (!(posicao >=0 && posicao < tamanho)) {
@@ -65,7 +61,7 @@ public class Aulas {
     }*/
     
     
-    // aula 04  Verificar se elemento existe no vetor 
+    // AULA 04  VERIFICAR SE ELEMENTO EXISTE NO VETOR 
     
     public int busca (String elemento) {
         for (int i=0; i < this.tamanho; i++) {
@@ -80,7 +76,7 @@ public class Aulas {
        
     }
     
-    // aula 05 aumentar a capacidade do vetor 
+    // AULA 05 AUMENTAR A CAPACIDADE DO VETOR  
     
     
         private void aumenteCapacidade() {
@@ -94,7 +90,24 @@ public class Aulas {
     }
     
     
-    
+    // AULA 06 REMOVER ELEMENTO
+    // B G D E F -> POSIÇÃO A SER REMOVIDA É 1 (G)
+    // 0 1 2 3 4 
+    // VETOR [1] = VETOR [2]
+    // VETOR [2] = VETOR [3]
+    // VETOR [3] = VETOR [4]
+        
+        
+    public void  remove (int posicao){
+        if (!(posicao >=0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posição invalida"); 
+        }
+        for(int i = posicao; i < this.tamanho -1; i++) {
+            this.elementos[i] = this.elementos[i+1];
+            
+        }
+        this.tamanho--;
+    } 
         
         
         

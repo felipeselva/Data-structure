@@ -1,8 +1,10 @@
 
-package estrutura.dados.java;
+package Aula;
+
+import estrutura.dados.java.Aulas;
 
 
-public class Vetor {
+public class Aula06 {
     
     public static void main(String[] args) {
         
@@ -17,7 +19,8 @@ public class Vetor {
         
         System.out.println(vetor);
         
+     vetor.remove(1);
         
-        
-    }
+        System.out.println(vetor);
+}
 }
